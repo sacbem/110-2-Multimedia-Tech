@@ -21,38 +21,35 @@ void drawLine(Mat src, Mat dst)
 }
 int main(int argc, const char** argv)
 {
-    Mat source = imread("C:/Users/Dell/Desktop/cvt/highway.jpg");
-    Mat gray = imread("C:/Users/Dell/Desktop/cvt/highway.jpg", IMREAD_GRAYSCALE);
+    Mat source = imread("C:/Users/Dell/Desktop/cvt/WEEK3/highway.jpg");
+    Mat gray = imread("C:/Users/Dell/Desktop/cvt/WEEK3/highway.jpg", IMREAD_GRAYSCALE);
     Mat equ_dst;
 
     equalizeHist(gray,equ_dst);
 
-    vector<int> blurKernel={3,5};
+    vector<int> blurKernel={5,7,1};
 
-    for(auto x : blurKernel)
+    for(auto x : blurKernel){
         medianBlur(equ_dst, equ_dst,x);
+    }
 
-    imshow("medianBlur:", equ_dst);
-    
     Mat threshold_1,lap;
     threshold(equ_dst, threshold_1, 245, 255, THRESH_BINARY);
-    imshow("threshold_1:", threshold_1);
 
     Mat kernelOptimal=getStructuringElement(MORPH_RECT,Size(5,5));
 
-    for (int i=0;i<2;i++)
+    for (int i=0;i<2;i++){
         morphologyEx(threshold_1,threshold_1,MORPH_CLOSE,kernelOptimal);
-
+    }
+        
     Laplacian(threshold_1,lap,CV_8U,3);
-
     drawLine(lap, source);
-	imshow("The processed image", source);
+	imshow("Result", source);
     
     waitKey(0);
     system("pause");
     return 0;
 }
-
 
 
 
