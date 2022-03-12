@@ -1,9 +1,0 @@
-C:/Users/Dell/Desktop/cvt/build/CMakeFiles/NightlyMemoryCheck.dir
-C:/Users/Dell/Desktop/cvt/build/CMakeFiles/Experimental.dir
-C:/Users/Dell/Desktop/cvt/build/CMakeFiles/Continuous.dir
-C:/Users/Dell/Desktop/cvt/build/CMakeFiles/Nightly.dir
-C:/Users/Dell/Desktop/cvt/build/CMakeFiles/RUN_TESTS.dir
-C:/Users/Dell/Desktop/cvt/build/CMakeFiles/cvt.dir
-C:/Users/Dell/Desktop/cvt/build/CMakeFiles/PACKAGE.dir
-C:/Users/Dell/Desktop/cvt/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Dell/Desktop/cvt/build/CMakeFiles/ZERO_CHECK.dir
