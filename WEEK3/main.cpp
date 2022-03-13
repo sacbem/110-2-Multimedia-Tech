@@ -8,20 +8,18 @@ using namespace std;
 #include <opencv2/highgui.hpp>
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc/types_c.h>
+
 using  namespace cv;
 
-void drawLine(Mat src, Mat dst)
-{
+void drawLine(Mat src, Mat dst){
     vector<Vec4i>lines;
 	HoughLinesP(src, lines, 1, CV_PI / 180, 50, 0, 50);
     for(auto x : lines){
         line( dst, Point(x[0],x[1]), Point(x[2], x[3]), Scalar(0,255,0), 2, LINE_AA);
     }
-
 }
-int main(int argc, const char** argv)
-{
-    Mat source = imread("C:/Users/Dell/Desktop/cvt/WEEK3/highway.jpg");
+int main(int argc, const char** argv){
+    Mat source = imread("./highway.jpg");
     Mat gray = imread("C:/Users/Dell/Desktop/cvt/WEEK3/highway.jpg", IMREAD_GRAYSCALE);
     Mat equ_dst;
 
