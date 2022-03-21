@@ -19,8 +19,8 @@ void drawLine(Mat src, Mat dst){
     }
 }
 int main(int argc, const char** argv){
-    Mat source = imread("./highway.jpg");
-    Mat gray = imread("C:/Users/Dell/Desktop/cvt/WEEK3/highway.jpg", IMREAD_GRAYSCALE);
+    Mat source = imread("../../highway.jpg");
+    Mat gray = imread("../../highway.jpg", IMREAD_GRAYSCALE);
     Mat equ_dst;
 
     equalizeHist(gray,equ_dst);
@@ -48,6 +48,5 @@ int main(int argc, const char** argv){
     system("pause");
     return 0;
 }
-
 
 
