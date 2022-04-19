@@ -9,6 +9,7 @@ add_executable(WEEK3 main.cpp)
 include_directories(${OpenCV_INCLUDE_DIRS})
 target_link_libraries(WEEK3 ${OpenCV_LIBS})
 
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
