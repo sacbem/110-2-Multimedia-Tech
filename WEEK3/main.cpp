@@ -18,9 +18,9 @@ void drawLine(Mat src, Mat dst){
         line( dst, Point(x[0],x[1]), Point(x[2], x[3]), Scalar(0,255,0), 2, LINE_AA);
     }
 }
-int main(int argc, const char** argv){
-    Mat source = imread("./highway.jpg");
-    Mat gray = imread("C:/Users/Dell/Desktop/cvt/WEEK3/highway.jpg", IMREAD_GRAYSCALE);
+int main(){
+    Mat source = imread("C:/Users/xxx50/Desktop/tut/110-2-Multimedia-Tech/WEEK3/highway.jpg");
+    Mat gray = imread("C:/Users/xxx50/Desktop/tut/110-2-Multimedia-Tech/WEEK3/highway.jpg", IMREAD_GRAYSCALE);
     Mat equ_dst;
 
     equalizeHist(gray,equ_dst);
@@ -45,8 +45,7 @@ int main(int argc, const char** argv){
 	imshow("Result", source);
     
     waitKey(0);
-    system("pause");
-    return 0;
+        return 0;
 }
 
 
